@@ -4,6 +4,7 @@ import {
   SearchOutlined,
   FavoriteBorderOutlined,
 } from "@material-ui/icons";
+import { mobile } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -24,7 +25,7 @@ const Info = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 5px;
-  min-width: 280px;
+  min-width: 250px;
   height: 350px;
   display: flex;
   align-items: center;
@@ -35,6 +36,7 @@ const Container = styled.div`
   &:hover ${Info} {
     opacity: 1;
   }
+  ${mobile({ minWidth: "200px", margin: "10px auto" })}
 `;
 
 const Circle = styled.div`
@@ -48,6 +50,7 @@ const Circle = styled.div`
 const Image = styled.img`
   height: 75%;
   z-index: 2;
+  ${mobile({ height: "60%" })}
 `;
 
 const Icon = styled.div`

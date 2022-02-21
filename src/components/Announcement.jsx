@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
-const Container = styled.div`
+const MyContainer = styled.div`
   height: 30px;
   background-color: teal;
   color: white;
@@ -9,10 +10,13 @@ const Container = styled.div`
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
+  ${mobile({ fontSize: "12px" })}
 `;
 
 const Announcement = () => {
-  return <Container>Super Deal! Free Shipping on Orders over 50$</Container>;
+  return (
+    <MyContainer>Super Deal! Free Shipping on Orders over 50$</MyContainer>
+  );
 };
 
 export default Announcement;

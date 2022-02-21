@@ -9,9 +9,11 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { tablet } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  ${tablet({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`

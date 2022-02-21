@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { mobile, tablet, min } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+
+  ${mobile({ height: "50px" })}
 `;
 
 const Wrapper = styled.div`
@@ -11,12 +14,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${tablet({ padding: "10px 0px" })}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({ display: "none", flex: 0 })}
 `;
 
 const Language = styled.span`
@@ -30,10 +35,12 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  ${min({ display: "none" })}
 `;
 
 const Input = styled.input`
   border: none;
+  ${tablet({ width: "50px" })}
 `;
 
 const Center = styled.div`
@@ -42,19 +49,24 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-weight: bold:
+  font-weight: bold;
+  ${mobile({ fontSize: "24px" })}
+  ${min({ fontSize: "16px" })}
 `;
+
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${tablet({ marginRight: "10px" })}
 `;
 
 const MenuItem = styled.div`
   font-size: 14;
   cursor: pointer;
   margin-left: 25px;
+  ${tablet({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
 const Navbar = () => {
@@ -64,7 +76,7 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
