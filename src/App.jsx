@@ -10,6 +10,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import Success from "./pages/Success";
 
 const App = () => {
   const user = true;
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+        <Route path="/success" element={<Success />} />
         <Route
           path="/register"
           element={user ? <Navigate to="/" /> : <Register />}
